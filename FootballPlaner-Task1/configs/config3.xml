@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="FootballPlanerTask1"/>
+    <feature automatic="selected" name="gameplaner"/>
+    <feature automatic="selected" name="games"/>
+    <feature automatic="selected" name="date"/>
+    <feature manual="selected" name="result"/>
+    <feature manual="selected" name="oponents"/>
+    <feature automatic="selected" name="team"/>
+    <feature automatic="selected" manual="selected" name="player"/>
+    <feature automatic="selected" name="statistics"/>
+    <feature automatic="selected" name="penalty"/>
+    <feature automatic="selected" name="yellowCard"/>
+    <feature automatic="selected" name="redCard"/>
+    <feature manual="selected" name="ban"/>
+    <feature manual="selected" name="table"/>
+    <feature manual="selected" name="server"/>
+    <feature automatic="selected" name="appearance"/>
+    <feature automatic="unselected" name="GUI"/>
+    <feature manual="selected" name="cmd"/>
+    <feature automatic="selected" name="export"/>
+    <feature manual="selected" name="JSON"/>
+</configuration>
