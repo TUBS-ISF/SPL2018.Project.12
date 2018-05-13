@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="FootballPlanerTask1">
+            <description>
+Ein Planer mit dem man seine Fußballspiele speichern kann und gleichzeitig gewünschte Statistiken zur Verfügung hat.
+</description>
+            <and mandatory="true" name="gameplaner">
+                <description>
+Hier werden alle Spiele in einer Liste gespeichert.
+</description>
+                <and abstract="true" mandatory="true" name="games">
+                    <description>
+Erzeugt ein Spiel.
+Ordnet jedem Spiel einen Namen und ein ID zu.
+</description>
+                    <feature mandatory="true" name="date">
+                        <description>
+Speichert das Datum und die Uhrzeit des Spiels.
+</description>
+                    </feature>
+                    <feature name="result">
+                        <description>
+Speichert das Ergebnis des Spiels.
+Hat das Spiel noch nicht stattgefunden, ist das Ergebnis "-1:-1" .
+</description>
+                    </feature>
+                    <feature abstract="true" name="course">
+                        <description>
+Speichert Ereignisse des Spiels und den jeweiligen Zeitpunkt.
+Ereignisse sind: Tore, gelbe Karten, rote Karten und Elfmeter.
+</description>
+                    </feature>
+                    <feature abstract="true" name="scorer">
+                        <description>
+Speichert die Torschützen des Spiels.
+</description>
+                    </feature>
+                    <feature abstract="true" name="oponents">
+                        <description>
+Speichert die beiden Parteien, die das Spiel bestreiten.
+</description>
+                    </feature>
+                </and>
+                <feature name="calendar">
+                    <description>
+ermöglicht die Ausgabe der Spiele in Klaenderform.
+</description>
+                </feature>
+            </and>
+            <and abstract="true" name="team">
+                <description>
+Speichert die Mannschaften.
+</description>
+                <and abstract="true" name="player">
+                    <description>
+Speichert die Spieler.
+Jeder Spieler hat einen Namen, Vornamen und einen Marktwert.
+</description>
+                    <feature abstract="true" name="goalcount">
+                        <description>
+Speichert die Anzahl Tore, die ein Spiele geschossen hat.
+</description>
+                    </feature>
+                </and>
+                <feature abstract="true" name="trainer">
+                    <description>
+Speichert die Trainer eines Teams.
+Es wird der Name, Vorname und die Position gespeichert.
+Postionen sind zum Beispiel: Cheftrainer, CoTrainer, Torwarttrainer.
+</description>
+                </feature>
+                <feature abstract="true" name="carer">
+                    <description>
+Speichert die Betreuer.
+Speichert Name, Vorname und Aufgabe.
+Aufgabe zum Beispiel Platzwart.
+</description>
+                </feature>
+            </and>
+            <or abstract="true" name="statistics">
+                <description>
+Erzeugt und verwaltet Statistiken.
+</description>
+                <and abstract="true" name="penalty">
+                    <description>
+Verwaltet die Strafen der Spieler.
+</description>
+                    <feature abstract="true" mandatory="true" name="yellowCard">
+                        <description>
+Speichert wie viele gelbe Karten ein Spieler hat.
+</description>
+                    </feature>
+                    <feature abstract="true" mandatory="true" name="redCard">
+                        <description>
+Speichert die Anzahl der Rotenkarten eines Spielers.
+</description>
+                    </feature>
+                    <feature abstract="true" name="ban">
+                        <description>
+Speichert die Sperre.
+Eine Sperre kann in 2 Arten vorkommen.
+1. Zeitsperre (von Datum bis Datum)
+2. Spielesperre (Anzahl Spiele gesperrt)
+</description>
+                    </feature>
+                </and>
+                <feature abstract="true" name="injury">
+                    <description>
+Speichert Verletzungen von Spielern.
+Verletzungen werden angegeben durch die Art der Verletzung und der vermutete Genesungszeitpunkt.
+</description>
+                </feature>
+                <feature abstract="true" name="table">
+                    <description>
+In der Tabelle werden die Teams und ihre Punkte festgehalten.
+Die Teams werden in Reihenfolge ihrer Punkte absteigend sortiert.
+</description>
+                </feature>
+                <feature abstract="true" name="topscorer">
+                    <description>
+Zeigt die fünf besten Torschützen und die Anzahl geschossener Tore.
+</description>
+                </feature>
+            </or>
+            <feature abstract="true" name="database">
+                <description>
+Speichert die Daten in einer Datenbank.
+</description>
+            </feature>
+            <feature abstract="true" name="server">
+                <description>
+Ermöglicht die Informationsbeschaffung von einem Server.
+Ermöglicht das hochladen von Informationen zum Server.
+So können zum Beispiel alle Spiele die online sind, in den eigenen Planer übertragen werden.
+Alternativ können zum Beispiel Ergebnisse eingetragen und hochgeladen werden.
+</description>
+            </feature>
+            <alt abstract="true" mandatory="true" name="appearance">
+                <description>
+Es ist eine der Darstellungsvarianten zu wählen.
+</description>
+                <feature abstract="true" name="GUI">
+                    <description>
+Ermöglicht die Eingabe sowie die Anzeige von Information über eine grafische Oberfläche.
+</description>
+                </feature>
+                <feature name="cmd">
+                    <description>
+Ein- und Ausgaben werden über die Commandline getätigt.
+</description>
+                </feature>
+            </alt>
+            <or abstract="true" name="export">
+                <description>
+Ermöglicht das Exportieren von Informationen.
+Beispielsweise eines Spiels oder von Statistiken.
+</description>
+                <feature abstract="true" name="JSON">
+                    <description>
+Informationen werden im JSON-Format exportiert.
+</description>
+                </feature>
+                <feature abstract="true" name="PDF">
+                    <description>
+Informationen werden im PDF-Format exportiert.
+</description>
+                </feature>
+            </or>
+        </and>
+    </struct>
+    <constraints>
+        <rule>
+            <imp>
+                <var>topscorer</var>
+                <var>goalcount</var>
+            </imp>
+        </rule>
+        <rule>
+            <imp>
+                <var>injury</var>
+                <var>player</var>
+            </imp>
+        </rule>
+        <rule>
+            <imp>
+                <var>penalty</var>
+                <var>player</var>
+            </imp>
+        </rule>
+        <rule>
+            <imp>
+                <var>oponents</var>
+                <var>team</var>
+            </imp>
+        </rule>
+        <rule>
+            <imp>
+                <var>table</var>
+                <var>team</var>
+            </imp>
+        </rule>
+    </constraints>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>

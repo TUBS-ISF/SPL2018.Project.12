@@ -1,0 +1,57 @@
+Date and Appearance are the only Mandatory features.
+So Date and at least one Appearance needs to be implemented.
+If only one Appearance is implemented, it is no feature that can be checked or unchecked.
+Therefore two more features have to be implemented.
+result and calender have no minor dependencys.
+
+In this task I'll implement the following 4 features:
+date
+result
+calender
+cmd
+
+Also there is a need for footballplaner as mainclass.
+
+//----------------------
+Start Application:
+Only Appearance implemented is cmd.
+So start application like this from the cmd:
+java -jar application.jar
+
+or
+
+java -jar application.jar parameter=boolean
+
+for example: java -jar application.jar result=false
+
+
+//---------------------
+
+Test with 5 standard Configurations:
+
+Config1:
+	No Minor Errors
+
+Config2:
+	No Minor Errors
+
+Config3:
+	No Minor Errors
+
+Config4:
+	Uses GUI, therefor unchecks cmd. (CMD and GUI are alternatives)
+	GUI is not implement yet and abstract.
+	So infact no appearance is active.
+	No Inputs are possible.
+
+Config5:
+	No Minor Errors
+
+//----------------------
+Configuration 1,2,3 and 5 behave identically, because they share the same implemented features.
+Problem is, there are not so many features implemented.
+
+//---------------------
+Features were developed seperated by each other. After implemtation of the features, mainclass was implemented.
+Then the specific features needed to be adjusted for checked or unchecked features.
+For example the toString Method of the Gameplaner was in the beginning only for Games. It needed to add Result, if result was checked. 
