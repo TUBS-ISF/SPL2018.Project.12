@@ -1,0 +1,5 @@
+<plugins>
+	<interface id="interfaces.IGame">
+		<class>date</class>
+	</interface>
+</plugins>

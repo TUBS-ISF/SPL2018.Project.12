@@ -1,0 +1,5 @@
+<plugins>
+	<interface id="interfaces.importer">
+		<class>importer</class>
+	</interface>
+</plugins>

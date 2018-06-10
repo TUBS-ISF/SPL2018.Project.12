@@ -1,0 +1,5 @@
+<plugins>
+	<interface id="interfaces.export">
+		<class>JsonExporter</class>
+	</interface>
+</plugins>

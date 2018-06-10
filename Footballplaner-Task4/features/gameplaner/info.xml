@@ -1,0 +1,5 @@
+<plugins>
+	<interface id="interfaces.planer">
+		<class>gameplaner</class>
+	</interface>
+</plugins>

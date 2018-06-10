@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/itextpdf-5.5.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/pdfbox-2.0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/gson-2.8.4.jar"/>
+	<classpathentry kind="lib" path="lib/JSON.jar"/>
+	<classpathentry kind="lib" path="lib/PDF.jar"/>
+	<classpathentry kind="lib" path="lib/calendar.jar"/>
+	<classpathentry kind="lib" path="lib/cmd.jar"/>
+	<classpathentry kind="lib" path="lib/date.jar"/>
+	<classpathentry kind="lib" path="lib/gameplaner.jar"/>
+	<classpathentry kind="lib" path="lib/import.jar"/>
+	<classpathentry kind="lib" path="lib/result.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
