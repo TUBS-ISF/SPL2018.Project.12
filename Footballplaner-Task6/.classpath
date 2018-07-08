@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="importer.aj|JSON.aj|result.aj|PDF.aj|trainer.aj|export.aj|player.aj|calendar.aj|carer.aj|team.aj" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/gson-2.8.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/itextpdf-5.5.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/David/Downloads/pdfbox-2.0.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
